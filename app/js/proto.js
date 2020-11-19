@@ -5,20 +5,19 @@ $(document).ready(function(){
         nav: true,
         mouseDrag: false,
         touchDrag: true,
-        items: 1
-        // responsive  : {
-        //     0: {
-
-        //         items: 2
-        //     },
-        //     600: {
-        //         // mouseDrag: false
-        //         items: 3
-        //     },
-        //     1000: {
-        //         items: 5
-        //     }
-        // }
+        // items: 1
+        responsive  : {
+            0: {
+                items: 2
+            },
+            600: {
+                // mouseDrag: false
+                items: 3
+            },
+            1000: {
+                items: 5
+            }
+        }
     });
 });
 
@@ -34,6 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function plusItem() {
         console.log(`item was added to the cart`)
     }
+    // Shopping cart END
 
 
     // Fill Listeners
@@ -57,6 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function dragEnd() {
+        console.log(this)
         this.className = 'fill';
     }
 
@@ -77,8 +78,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function dragDrop() {
-        console.log('drop')
-        this.className = 'empty'
+        console.log('drop', this)
+        this.className = 'empty';
         this.append(fill);
     }
 })

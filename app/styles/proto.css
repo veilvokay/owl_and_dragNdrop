@@ -93,3 +93,16 @@
 .invisible {
     display: none;
 }
+
+
+
+
+/* PROTOTYPE */
+.prototype-row {
+    margin-top: 25px;
+    background-color: #f3f3f3;
+}
+
+.owl-carousel .owl-item {
+    min-height: 100%;
+}
